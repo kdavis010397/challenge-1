@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.9375em;
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 0.375em;
+  }
+}
+
+body {
+  background-color: #090b1a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.card {
+  height: 70vh;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 1rem;
+  font-family: Inter;
+  font-weight: 400;
+  overflow: hidden;
+  display: flex;
+}
+@media screen and (max-width: 375px) {
+  .card {
+    height: 90vh;
+    flex-direction: column-reverse;
+  }
+}
+.card__info {
+  flex: 1 0 50%;
+  background-color: #1b1938;
+  padding: 5rem 6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+@media screen and (max-width: 375px) {
+  .card__info {
+    padding: 5rem 2.5rem;
+    text-align: center;
+  }
+}
+.card__heading {
+  color: white;
+  font-size: 3.5rem;
+  margin: -3rem 0;
+}
+.card__heading--highlight {
+  color: #aa5cdb;
+}
+.card__benefits {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+@media screen and (max-width: 375px) {
+  .card__benefits {
+    letter-spacing: 0.12rem;
+  }
+}
+.card__stats {
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  .card__stats {
+    height: 40%;
+    flex-flow: column;
+    align-content: space-around;
+  }
+}
+.card__stat {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+.card__stat--num {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.75rem;
+  font-family: Inter;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+.card__stat #stat-1 {
+  text-transform: none;
+}
+.card__image-container {
+  flex: 1 0 50%;
+  background-color: #aa5cdb;
+  display: flex;
+}
+@media screen and (max-width: 375px) {
+  .card__image-container {
+    flex-basis: 20%;
+  }
+}
+.card__image {
+  height: auto;
+  opacity: 50%;
+  width: 100%;
+}
+
+.attribution {
+  padding-top: 2.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+a {
+  text-decoration: none;
+  color: #aa5cdb;
+}
+
+/*# sourceMappingURL=style.css.map */

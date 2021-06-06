@@ -1,0 +1,142 @@
+@use 'colors' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.9375em;
+
+  @media screen and (max-width: 375px) {
+    font-size: 0.375em;
+  }
+}
+
+body {
+  background-color: $primary-1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.card {
+  height: 70vh;
+  width: 80vw;
+
+  margin: 0 auto;
+  border-radius: 1rem;
+  font-family: Inter;
+  font-weight: 400;
+  overflow: hidden;
+
+  display: flex;
+
+  @media screen and (max-width: 375px) {
+    height: 90vh;
+    flex-direction: column-reverse;
+  }
+
+  &__info {
+    flex: 1 0 50%;
+    background-color: $primary-2;
+    padding: 5rem 6rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+
+    @media screen and (max-width: 375px) {
+      padding: 5rem 2.5rem;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    color: $neutral-1;
+    font-size: 3.5rem;
+    margin: -3rem 0;
+
+    &--highlight {
+      color: $primary-3;
+    }
+  }
+
+  &__benefits {
+    color: $neutral-2;
+    font-size: 1.5rem;
+    line-height: 1.8;
+
+    @media screen and (max-width: 375px) {
+      letter-spacing: 0.12rem;
+    }
+  }
+
+  &__stats {
+    color: $neutral-3;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 375px) {
+      height: 40%;
+      flex-flow: column;
+      align-content: space-around;
+    }
+  }
+
+  &__stat {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+
+    &--num {
+      color: $neutral-2;
+      font-size: 2.75rem;
+      font-family: Inter;
+      font-weight: 700;
+      letter-spacing: normal;
+    }
+
+    #stat-1 {
+      text-transform: none;
+    }
+  }
+
+  &__image-container {
+    flex: 1 0 50%;
+    background-color: $primary-3;
+
+    display: flex;
+
+    @media screen and (max-width: 375px) {
+      flex-basis: 20%;
+    }
+  }
+
+  &__image {
+    height: auto;
+    opacity: 50%;
+    width: 100%;
+  }
+}
+
+.attribution {
+  padding-top: 2.5rem;
+  color: $neutral-3;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-3;
+}
